@@ -11,7 +11,7 @@ What type of access control is intended to discover unwanted or unauthorized act
 ## Question 2
 Which one of the following presents the most complex decoy environment for an attacker to explore during an intrusion attempt?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter12_images/img_page_462_4467.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter12_images/img_page_462_4467.png)
 
 * [ ] **A.** Honeypot
 * [ ] **B.** Darknet
@@ -53,7 +53,7 @@ Ed is tasked with protecting information about his organization's customers, inc
 ## Question 7
 What software development life-cycle model is shown in the following illustration?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter12_images/img_page_464_4470.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter12_images/img_page_464_4470.png)
 
 * [ ] **A.** Spiral
 * [ ] **B.** Agile
@@ -284,7 +284,7 @@ If Tara made the change from differential to incremental backups and we assume t
 ## Question 35
 The following figure shows an example of an attack where Mal, the attacker, has redirected traffic from a user's system to their own, allowing them to read TLS encrypted traffic. Which of the following terms best describes this attack?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter12_images/img_page_473_4481.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter12_images/img_page_473_4481.png)
 
 * [ ] **A.** A DNS hijacking attack
 * [ ] **B.** An ARP spoofing attack
@@ -454,7 +454,7 @@ Fred needs to transfer files between two servers on an untrusted network. Since 
 ## Question 56
 Manesh wants to help his organization build secure software. Which of the following is not a common security best practice for working with security frameworks and libraries?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter12_images/img_page_481_4491.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter12_images/img_page_481_4491.png)
 
 * [ ] **A.** Use internally developed libraries and frameworks whenever possible to reduce third-party threats.
 * [ ] **B.** Identify and inventory all third-party libraries.
@@ -805,7 +805,7 @@ Which one of the following statements about the SDLC is correct?
 ## Question 99
 In the diagram shown here, Harry is prevented from reading a file at a higher classification level than his security clearance. What security model prevents this behavior?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter12_images/img_page_494_4505.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter12_images/img_page_494_4505.png)
 
 * [ ] **A.** Bell–LaPadula
 * [ ] **B.** Biba
@@ -900,7 +900,7 @@ Jack's data center design calls for dual-power supplies in every critical server
 ## Question 110
 What step is missing from the IR process cycle diagram shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter12_images/img_page_498_4510.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter12_images/img_page_498_4510.png)
 
 * [ ] **A.** Forensics
 * [ ] **B.** Retribution

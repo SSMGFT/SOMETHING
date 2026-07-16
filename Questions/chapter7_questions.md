@@ -3,7 +3,7 @@
 ## Question 1
 Mary is reviewing the availability controls for the system architecture shown here. What technology is shown that provides fault tolerance for the database servers?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter7_images/img_page_253_2955.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_253_2955.png)
 
 * [ ] **A.** Failover cluster
 * [ ] **B.** UPS
@@ -98,7 +98,7 @@ As Gary decides what access permissions he should grant to each user, what princ
 ## Question 12
 As Gary designs the program, he uses the matrix shown here. What principle of information security does this matrix most directly help enforce?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter7_images/img_page_257_2960.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_257_2960.png)
 
 * [ ] **A.** Segregation of duties
 * [ ] **B.** Privilege creep
@@ -252,7 +252,7 @@ Beth is creating a new cybersecurity incident response team (CSIRT) and would li
 ## Question 31
 Sam is responsible for backing up his company's primary file server. He configured a backup schedule that performs full backups every Monday evening at 9 p.m. and differential backups on other days of the week at that same time. Files change according to the information shown here. How many files will be copied in Wednesday's backup?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter7_images/img_page_263_2967.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_263_2967.png)
 
 * [ ] **A.** 2
 * [ ] **B.** 3
@@ -382,7 +382,7 @@ Connor's company recently experienced a denial-of- service attack that Connor be
 ## Question 47
 Evan detects an attack against a server in his organization and examines the TCP flags on a series of packets, shown in the following diagram. What type of attack most likely took place?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter7_images/img_page_268_2973.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_268_2973.png)
 
 * [ ] **A.** SYN flood
 * [ ] **B.** Ping flood
@@ -424,7 +424,7 @@ During an incident investigation, investigators meet with a system administrator
 ## Question 52
 What technique has been used to protect the intellectual property shown here? Source: Bruce Jaffe / USGS / Public domain
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter7_images/img_page_270_2976.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_270_2976.png)
 
 * [ ] **A.** Steganography
 * [ ] **B.** Clipping

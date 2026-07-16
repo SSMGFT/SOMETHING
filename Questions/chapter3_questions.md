@@ -11,7 +11,7 @@ Matthew is the security administrator for a consulting firm and must enforce acc
 ## Question 2
 Referring to the figure shown here, what is the earliest stage of a fire where it is possible to use detection technology to identify it?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_103_1870.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_103_1870.png)
 
 * [ ] **A.** Incipient
 * [ ] **B.** Smoke
@@ -93,7 +93,7 @@ What type of security vulnerability are developers most likely to introduce into
 ## Question 12
 In the figure shown here, Sally is blocked from reading the file due to the Biba integrity model. Sally has a Secret security clearance, and the file has a Confidential classification. What principle of the Biba model is being enforced?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_106_1874.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_106_1874.png)
 
 * [ ] **A.** Simple Security Property
 * [ ] **B.** Simple Integrity Property
@@ -212,7 +212,7 @@ Joanna wants to review the status of the industrial control systems her organiza
 ## Question 26
 In the figure shown here, Harry's request to write to the data file is blocked. Harry has a Secret security clearance, and the data file has a Confidential classification. What principle of the Bell-LaPadula model blocked this request?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_111_1880.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_111_1880.png)
 
 * [ ] **A.** Simple Security Property
 * [ ] **B.** Simple Integrity Property
@@ -262,7 +262,7 @@ What cryptographic principle stands behind the idea that cryptographic algorithm
 ## Question 32
 Ryan is developing a physical access plan for his organization's data center and wants to implement the security control indicated by the arrow in this diagram. What is the name of this control?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_113_1883.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_113_1883.png)
 
 * [ ] **A.** Access control vestibule
 * [ ] **B.** Turnstile
@@ -280,7 +280,7 @@ Which one of the following does not describe a standard physical security requir
 ## Question 34
 In the figure shown here, Sally is blocked from writing to the data file by the Biba integrity model. Sally has a Secret security clearance, and the file is classified Top Secret. What principle is preventing her from writing to the file?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_114_1885.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_114_1885.png)
 
 * [ ] **A.** Simple Security Property
 * [ ] **B.** Simple Integrity Property
@@ -370,7 +370,7 @@ Kyle is being granted access to a military computer system that uses System High
 ## Question 45
 Gary intercepts a communication between two individuals and suspects that they are exchanging secret messages. The content of the communication appears to be the image shown here. What type of technique may the individuals use to hide messages inside this image? Source: Matt65 / Wikimedia Commons / Public domain.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_118_1890.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_118_1890.png)
 
 * [ ] **A.** Visual cryptography
 * [ ] **B.** Steganography
@@ -388,7 +388,7 @@ Philip is developing a new security tool that will be used by individuals in man
 ## Question 47
 In the ring protection model shown here, what ring contains the operating system's kernel?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_119_1893.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_119_1893.png)
 
 * [ ] **A.** Ring 0
 * [ ] **B.** Ring 1
@@ -462,7 +462,7 @@ Alice sent a message to Bob. Bob would like to demonstrate to Charlie that the m
 ## Question 56
 Rhonda is considering the use of new identification cards for physical access control in her organization. She comes across a military system that uses the card shown here. What type of card is this?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_123_1898.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_123_1898.png)
 
 * [ ] **A.** Smart card
 * [ ] **B.** Proximity card
@@ -616,7 +616,7 @@ Warren is designing a physical intrusion detection system for use in a sensitive
 ## Question 75
 John and Gary are negotiating a business transaction, and John must demonstrate to Gary that he has access to a system. He engages in an electronic version of the “magic door” scenario shown here. What technique is John using?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter3_images/img_page_130_1906.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter3_images/img_page_130_1906.png)
 
 * [ ] **A.** Split-knowledge proof
 * [ ] **B.** Zero-knowledge proof

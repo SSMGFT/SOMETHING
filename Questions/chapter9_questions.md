@@ -224,7 +224,7 @@ Frank is the security administrator for a web server that provides news and info
 ## Question 28
 In the database table shown here, which column would be the best candidate for a primary key?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_337_3542.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_337_3542.png)
 
 * [ ] **A.** Company ID
 * [ ] **B.** Company Name
@@ -290,7 +290,7 @@ Lila is reviewing her organization's adverse termination process. In that proces
 ## Question 36
 William is reviewing log files that were stored on a system with a suspected compromise. He finds the log file shown here. What type of log file is this?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_341_3547.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_341_3547.png)
 
 * [ ] **A.** Firewall log
 * [ ] **B.** Change log
@@ -385,7 +385,7 @@ Nandi is evaluating a set of candidate systems to replace a biometric authentica
 ## Question 47
 Sean suspects that an individual in his company is smuggling out secret information despite his company's careful use of data loss prevention systems. He discovers that the suspect is posting photos, including the one shown here, to public Internet message boards. What type of technique may the individuals be using to hide messages inside this image? Source: National Museum of American History / Wikimedia Commons / Public domain.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_346_3554.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_346_3554.png)
 
 * [ ] **A.** Watermarking
 * [ ] **B.** VPN
@@ -483,7 +483,7 @@ Kailey is reviewing a set of old records maintained by her organization and want
 ## Question 59
 Alan is considering the use of new identification cards in his organization that will be used for physical access control. He comes across a sample card and is unsure of the technology. He breaks it open and sees the following internal construction. What type of card is this? Source: Arkrishna / Wikimedia Commons / Public domain.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_350_3560.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_350_3560.png)
 
 * [ ] **A.** Smart card
 * [ ] **B.** Proximity card
@@ -746,7 +746,7 @@ Shahla's organization handles personally identifiable information as part of its
 ## Question 91
 What type of risk assessment uses tools such as the one shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_362_3574.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_362_3574.png)
 
 * [ ] **A.** Quantitative
 * [ ] **B.** Loss expectancy
@@ -884,7 +884,7 @@ Ron's organization does not have the resources to conduct penetration testing th
 ## Question 108
 In the figure shown here, Harry's request to read the data file is blocked. Harry has a Secret security clearance, and the data file has a Top Secret classification. What principle of the Bell–LaPadula model blocked this request?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_368_3581.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_368_3581.png)
 
 * [ ] **A.** Simple Security Property
 * [ ] **B.** Simple Integrity Property
@@ -894,7 +894,7 @@ In the figure shown here, Harry's request to read the data file is blocked. Harr
 ## Question 109
 Norm is starting a new software project with a vendor that uses an SDLC approach to development. When he arrives on the job, he receives a document that has the sections shown here. What type of planning document is this?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_368_3582.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_368_3582.png)
 
 * [ ] **A.** Functional requirements
 * [ ] **B.** Work breakdown structure
@@ -1005,7 +1005,7 @@ Alice wants to send Bob a message with the confidence that Bob will know the mes
 ## Question 122
 What network topology is shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter9_images/img_page_374_3590.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter9_images/img_page_374_3590.png)
 
 * [ ] **A.** A ring
 * [ ] **B.** A bus

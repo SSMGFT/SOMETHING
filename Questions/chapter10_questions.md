@@ -131,7 +131,7 @@ Which one of the following tools may be used to achieve the goal of nonrepudiati
 ## Question 17
 In this diagram of the TCP three-way handshake, what should system A send to system B in step 3?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter10_images/img_page_382_3884.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter10_images/img_page_382_3884.png)
 
 * [ ] **A.** ACK
 * [ ] **B.** SYN
@@ -226,7 +226,7 @@ An emergency button under the desk is a common example of what type of physical 
 ## Question 28
 Henry runs Nikto against an Apache web server and receives the output shown here. Which of the following statements is the least important to include in his report?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter10_images/img_page_386_3889.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter10_images/img_page_386_3889.png)
 
 * [ ] **A.** The missing clickjacking x-frame options could be used to redirect input to a malicious site or frame.
 * [ ] **B.** Cross-site scripting protections should be enabled, but aren't.
@@ -300,7 +300,7 @@ CAPEC, STIX, and TAXII are all used for what purpose?
 ## Question 37
 Meena wants to ensure that her supply chain risks are well managed. Which of the following is not a common practice she should include in her supply chain risk management (SCRM) plan?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter10_images/img_page_389_3893.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter10_images/img_page_389_3893.png)
 
 * [ ] **A.** Using contractual controls such as insurance and liability limitations where appropriate
 * [ ] **B.** Relying on a single vendor to provide vendor stability
@@ -763,7 +763,7 @@ Grace uses her cloud service provider's function-as-a- service (FaaS) environmen
 ## Question 94
 What type of log file is shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter10_images/img_page_406_3911.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter10_images/img_page_406_3911.png)
 
 * [ ] **A.** Application
 * [ ] **B.** Web server

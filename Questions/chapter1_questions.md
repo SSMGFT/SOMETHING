@@ -211,7 +211,7 @@ Carl is a federal agent investigating a computer crime case. He identified an at
 ## Question 27
 ISC2 uses the logo shown here to represent itself online and in a variety of forums. What type of intellectual property protection can it use to protect its rights in this logo? Source: ISC2, Inc.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_33_1315.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_33_1315.png)
 
 * [ ] **A.** Copyright
 * [ ] **B.** Patent
@@ -221,7 +221,7 @@ ISC2 uses the logo shown here to represent itself online and in a variety of for
 ## Question 28
 Mary is helping a computer user who sees the following message appear on his computer screen. What type of attack has occurred? Source: CryptoLocker
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_34_1318.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_34_1318.png)
 
 * [ ] **A.** Availability
 * [ ] **B.** Confidentiality
@@ -500,7 +500,7 @@ Elise is helping her organization prepare to evaluate and adopt a new cloud-base
 ## Question 62
 The following graphic shows the NIST risk management framework with a step missing. What is the missing step?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_46_1331.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_46_1331.png)
 
 * [ ] **A.** Assess security controls.
 * [ ] **B.** Determine control gaps.
@@ -654,7 +654,7 @@ Ben is responsible for the security of payment card information stored in a data
 ## Question 81
 The Domer Industries risk assessment team recently conducted a qualitative risk assessment and developed a matrix similar to the one shown here. Which quadrant contains the risks that require the most immediate attention?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_52_1338.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_52_1338.png)
 
 * [ ] **A.** I
 * [ ] **B.** II
@@ -688,7 +688,7 @@ Helen is the owner of a U.S. website that provides information for middle and hi
 ## Question 85
 Tom is considering locating a business in the downtown area of Miami, Florida. He consults the FEMA flood plain map for the region, shown here, and determines that the area he is considering lies within a 100-year flood plain. What is the ARO of a flood in this area? Source: The City of North Miami
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_54_1341.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_54_1341.png)
 
 * [ ] **A.** 100
 * [ ] **B.** 1
@@ -698,7 +698,7 @@ Tom is considering locating a business in the downtown area of Miami, Florida. H
 ## Question 86
 You discover that a user on your network has been using the Wireshark tool, as shown here. Further investigation revealed that he was using it for illicit purposes. What pillar of information security has most likely been violated? Source: The Wireshark Foundation
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_55_1343.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_55_1343.png)
 
 * [ ] **A.** Integrity
 * [ ] **B.** Denial
@@ -708,7 +708,7 @@ You discover that a user on your network has been using the Wireshark tool, as s
 ## Question 87
 Alan is performing threat modeling and decides that it would be useful to decompose the system into the core elements shown here. What tool is he using?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter1_images/img_page_56_1345.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter1_images/img_page_56_1345.png)
 
 * [ ] **A.** Vulnerability assessment
 * [ ] **B.** Fuzzing

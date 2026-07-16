@@ -59,7 +59,7 @@ Staff in an information technology (IT) department who are delegated responsibil
 ## Question 8
 Helen's company uses a simple data life cycle, as shown here. What stage should come first in the company's data life cycle?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter2_images/img_page_65_1584.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter2_images/img_page_65_1584.png)
 
 * [ ] **A.** Data policy creation
 * [ ] **B.** Data labeling
@@ -428,7 +428,7 @@ Alex works for a government agency that is required to meet U.S. federal governm
 ## Question 52
 Ben is following the National Institute of Standards and Technology (NIST) Special Publication 800-88 guidelines for sanitization and disposition as shown here. He is handling information that his organization classified as sensitive, which is a moderate security categorization in the NIST model. If the media is going to be sold as surplus, what process does Ben need to follow? Source: NIST SP 800-88 / Public Domain.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter2_images/img_page_80_1600.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter2_images/img_page_80_1600.png)
 
 * [ ] **A.** Destroy, validate, document
 * [ ] **B.** Clear, purge, document
@@ -552,7 +552,7 @@ Data stored in RAM is best characterized as what type of data?
 ## Question 66
 What issue is the validation portion of the NIST SP 800- 88 sample certificate of sanitization (shown here) intended to help prevent? Source: Certificate of Sanitization / NIST / Public Domain.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter2_images/img_page_86_1608.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter2_images/img_page_86_1608.png)
 
 * [ ] **A.** Destruction
 * [ ] **B.** Reuse
@@ -610,9 +610,9 @@ Which of the following tasks is not performed by a system owner per NIST SP 800-
 ## Question 73
 NIST SP 800-60 provides a process shown in the following diagram to assess information systems. What process does this diagram show? Source: NIST SP 800-60 / Public Domain.
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter2_images/img_page_89_1612.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter2_images/img_page_89_1612.png)
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter2_images/img_page_90_1614.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter2_images/img_page_90_1614.png)
 
 * [ ] **A.** Selecting a standard and implementing it
 * [ ] **B.** Categorizing and selecting controls

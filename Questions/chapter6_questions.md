@@ -357,7 +357,7 @@ What four types of coverage criteria are commonly used when validating the work 
 ## Question 44
 As part of his role as a security manager, Jacob provides the following chart to his organization's management team. What type of measurement is he providing for them?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter6_images/img_page_231_2703.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter6_images/img_page_231_2703.png)
 
 * [ ] **A.** A coverage rate measure
 * [ ] **B.** A key performance indicator
@@ -391,7 +391,7 @@ Alan's organization uses the Security Content Automation Protocol (SCAP) to stan
 ## Question 48
 Susan is reviewing software testing coverage data and sees the information shown here. What can she determine about this testing process? (Select all answers that apply.)
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter6_images/img_page_232_2705.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter6_images/img_page_232_2705.png)
 
 * [ ] **A.** The testing does not have full coverage.
 * [ ] **B.** Test 4 completed with no failures.
@@ -417,7 +417,7 @@ During a penetration test, Selah calls her target's help desk claiming to be the
 ## Question 51
 In this image, what issue may occur due to the log handling settings? Source: Microsoft Corporation
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter6_images/img_page_234_2708.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter6_images/img_page_234_2708.png)
 
 * [ ] **A.** Log data may be lost when the log is archived.
 * [ ] **B.** Log data may be overwritten.

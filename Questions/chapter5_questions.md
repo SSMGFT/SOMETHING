@@ -602,7 +602,7 @@ Ben's organization has had an issue with unauthorized access to applications and
 ## Question 74
 What type of authentication scenario is shown in the following diagram?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter5_images/img_page_204_2437.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter5_images/img_page_204_2437.png)
 
 * [ ] **A.** Hybrid federation
 * [ ] **B.** On-premise federation
@@ -708,7 +708,7 @@ Isabelle wants to prevent privilege escalation attacks via her organization's se
 ## Question 87
 In the NIST zero trust model, what component includes the Policy Engine and the Policy Administrator as shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter5_images/img_page_208_2442.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter5_images/img_page_208_2442.png)
 
 * [ ] **A.** The control plane module
 * [ ] **B.** The policy decision point
@@ -734,7 +734,7 @@ Kristen wants to control access to an application in her organization based on a
 ## Question 90
 When Alex sets the permissions shown here as one of many users on a Linux server, what type of access control model is he leveraging?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter5_images/img_page_209_2444.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter5_images/img_page_209_2444.png)
 
 * [ ] **A.** Role-based access control
 * [ ] **B.** Rule-based access control
@@ -752,7 +752,7 @@ Joanna leads her organization's identity management team and wants to ensure tha
 ## Question 92
 What type of authorization mechanism is shown in the following chart?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter5_images/img_page_210_2446.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter5_images/img_page_210_2446.png)
 
 * [ ] **A.** RBAC
 * [ ] **B.** ABAC

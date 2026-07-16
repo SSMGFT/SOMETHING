@@ -35,7 +35,7 @@ Ben wants to provide predictive information about his organization's risk exposu
 ## Question 5
 In the image shown here, what does system B send to system A at step 2 of the three-way TCP handshake?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_417_4159.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_417_4159.png)
 
 * [ ] **A.** SYN
 * [ ] **B.** ACK
@@ -69,7 +69,7 @@ Faith is looking at the /etc/passwd file on a system configured to use shadowed 
 ## Question 9
 Berta is analyzing the logs of the Windows Firewall on one of her servers and comes across the entries shown in this figure. What type of attack do these entries indicate?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_419_4163.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_419_4163.png)
 
 * [ ] **A.** SQL injection
 * [ ] **B.** Port scan
@@ -159,7 +159,7 @@ Kayla recently took a position at a new start-up company that runs entirely in t
 ## Question 20
 Cameron is responsible for backing up his company's primary file server. He configured a backup schedule that performs full backups every Monday evening at 9 p.m. and incremental backups on other days of the week at that same time. How many files will be copied in Wednesday's backup?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_423_4168.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_423_4168.png)
 
 * [ ] **A.** 1
 * [ ] **B.** 2
@@ -262,7 +262,7 @@ Lauren's team of system administrators each deals with hundreds of systems with 
 ## Question 32
 Ed's Windows system can't connect to the network, and ipconfig shows the following: What has occurred on the system?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_427_4173.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_427_4173.png)
 
 * [ ] **A.** The system has been assigned an invalid IP address by its DHCP server.
 * [ ] **B.** The system has a manually assigned IP address.
@@ -304,7 +304,7 @@ Tom believes that a customer of his Internet service provider has been exploitin
 ## Question 37
 In the protection ring model shown here, what ring contains user programs and applications?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_429_1893.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_429_1893.png)
 
 * [ ] **A.** Ring 0
 * [ ] **B.** Ring 1
@@ -663,7 +663,7 @@ Fred finds a packet that his protocol analyzer shows with both PSH and URG set. 
 ## Question 81
 What code review process is shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_444_4192.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_444_4192.png)
 
 * [ ] **A.** Static inspection
 * [ ] **B.** Fagan inspection
@@ -673,7 +673,7 @@ What code review process is shown here?
 ## Question 82
 During a log review, Karen discovers that the system she needs to gather logs from has the log setting shown here. What problem is Karen likely to encounter?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_445_4194.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_445_4194.png)
 
 * [ ] **A.** Too much log data will be stored on the system.
 * [ ] **B.** The system is automatically purging archived logs.
@@ -683,7 +683,7 @@ During a log review, Karen discovers that the system she needs to gather logs fr
 ## Question 83
 While investigating a widespread distributed denial-of- service attack, Matt types in the IP address of one of the attacking systems into his browser and sees the following page. What type of devices is the botnet likely composed of?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter11_images/img_page_446_4196.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter11_images/img_page_446_4196.png)
 
 * [ ] **A.** SCADA
 * [ ] **B.** Cloud infrastructure

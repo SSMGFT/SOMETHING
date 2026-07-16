@@ -727,7 +727,7 @@ Alaina wants to ensure that systems are compliant with her network security sett
 ## Question 89
 Derek wants to deploy redundant core routers, as shown in the diagram. What model of high availability clustering will provide him with the greatest throughput?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter4_images/img_page_172_2184.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter4_images/img_page_172_2184.png)
 
 * [ ] **A.** Active/active
 * [ ] **B.** Line interactive
@@ -817,7 +817,7 @@ During a forensic investigation, Charles is able to determine the Media Access C
 ## Question 100
 Mikayla is reviewing her organization's VoIP environment configuration and finds a diagram that shows the following design. What concern should she express?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter4_images/img_page_175_2188.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter4_images/img_page_175_2188.png)
 
 * [ ] **A.** The voice connection is unencrypted and could be listened to.
 * [ ] **B.** There are no security issues in this diagram.

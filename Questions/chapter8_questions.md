@@ -27,7 +27,7 @@ Which one of the following statements is not true about code review?
 ## Question 4
 Kathleen is reviewing the Ruby code shown here. What security technique is this code using?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_289_3232.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_289_3232.png)
 
 * [ ] **A.** Parameterization
 * [ ] **B.** Typecasting
@@ -61,7 +61,7 @@ Arnold is creating a new software package and is making use of the OpenSSL libra
 ## Question 8
 Jaime is a technical support analyst and is asked to visit a user whose computer is displaying the error message shown here. What state has this computer entered?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_291_3235.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_291_3235.png)
 
 * [ ] **A.** Fail open
 * [ ] **B.** Irrecoverable error
@@ -79,7 +79,7 @@ Joshua is developing a software threat modeling program for his organization. Wh
 ## Question 10
 In the diagram shown here, which is an example of a method?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_292_3237.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_292_3237.png)
 
 * [ ] **A.** Account
 * [ ] **B.** Owner
@@ -89,7 +89,7 @@ In the diagram shown here, which is an example of a method?
 ## Question 11
 Wanda is reviewing the application development documentation used by her organization and finds the life-cycle illustration shown here. What application development method is her organization using?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_293_3240.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_293_3240.png)
 
 * [ ] **A.** Waterfall
 * [ ] **B.** Spiral
@@ -264,7 +264,7 @@ Vivian would like to hire a software tester to come in and evaluate a new web ap
 ## Question 32
 Referring to the database transaction shown here, what would happen if no account exists in the Accounts table with account number 1001?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_300_3249.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_300_3249.png)
 
 * [ ] **A.** The database would create a new account with this account number and give it a $250 balance.
 * [ ] **B.** The database would ignore that command and still reduce the balance of the second account by $250.
@@ -343,7 +343,7 @@ In further discussions with the vendor, Linda finds that they are willing to cor
 ## Question 41
 Hannah is a software developer working on creating statistical software using the R programming language. She uses the RStudio tool, shown here, to assist her in writing this code. What term best describes this tool?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_304_3254.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_304_3254.png)
 
 * [ ] **A.** SDK
 * [ ] **B.** IDE
@@ -465,7 +465,7 @@ Which one of the following is not an effective control against SQL injection att
 ## Question 56
 Jason is reviewing the documentation for a software development project and comes across the diagram shown here. What type of diagram is he examining?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_309_3260.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_309_3260.png)
 
 * [ ] **A.** WBS chart
 * [ ] **B.** PERT chart
@@ -579,7 +579,7 @@ Which one of the following statements is true about software testing?
 ## Question 70
 David is working on developing a project schedule for a software development effort, and he comes across the chart shown here. What type of chart is this?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_314_3266.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_314_3266.png)
 
 * [ ] **A.** Work breakdown structure
 * [ ] **B.** Functional requirements
@@ -605,7 +605,7 @@ Miguel recently completed a penetration test of the applications that his organi
 ## Question 73
 What part of the security review process are the input parameters shown in the diagram used for?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_316_3269.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_316_3269.png)
 
 * [ ] **A.** SQL injection review
 * [ ] **B.** Sprint review
@@ -631,7 +631,7 @@ Which one of the following approaches to failure management is the most conserva
 ## Question 76
 What software development model is shown here?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_317_3271.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_317_3271.png)
 
 * [ ] **A.** Waterfall
 * [ ] **B.** Agile
@@ -681,7 +681,7 @@ Nathan recently completed a software development project where he integrated the
 ## Question 82
 TJ is inspecting a system where the user reported a strange error message and the inability to access files. He sees the window shown here. What type of malware should TJ suspect?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_320_3275.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_320_3275.png)
 
 * [ ] **A.** Service injection
 * [ ] **B.** Encrypted virus
@@ -779,7 +779,7 @@ Brian is helping implement a new software testing methodology for his organizati
 ## Question 94
 What approach to technology management integrates the three components of technology management shown in this illustration?
 
-![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/chapter8_images/img_page_324_3280.png)
+![Diagram](https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter8_images/img_page_324_3280.png)
 
 * [ ] **A.** Agile
 * [ ] **B.** Lean
