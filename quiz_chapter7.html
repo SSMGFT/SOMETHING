@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chapter 7 Quiz Master</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background: #f5f6fa; color: #222; }
+    .page { max-width: 980px; margin: 0 auto; padding: 24px; }
+    h1, h2, h3 { margin-top: 0; }
+    h1 { font-size: 2rem; }
+    .intro { background: #ffffff; border: 1px solid #dde2ec; border-radius: 12px; padding: 18px 22px; margin-bottom: 20px; }
+    .question-card { background: #ffffff; border: 1px solid #dde2ec; border-radius: 12px; padding: 18px 22px; margin-bottom: 18px; }
+    .question-meta { font-size: 0.95rem; color: #5c6b85; margin-bottom: 8px; }
+    .question-text { margin: 0 0 12px; }
+    .choice { margin-bottom: 10px; }
+    .choice label { cursor: pointer; }
+    .question-image { max-width: 100%; border: 1px solid #d8dce6; border-radius: 8px; margin: 10px 0; }
+    .scenario { background: #eef7ff; border-left: 4px solid #3b82f6; padding: 14px 16px; margin-bottom: 16px; border-radius: 8px; }
+    .feedback { margin-top: 14px; padding: 14px 16px; border-radius: 10px; background: #f7fafc; border: 1px solid #dbe4ee; }
+    .feedback.correct { background: #ecfdf5; border-color: #a7f3d0; }
+    .feedback.incorrect { background: #fff1f2; border-color: #fecdd3; }
+    .hint { margin: 8px 0 0; color: #7f1d1d; font-size: 0.95rem; }
+    .explanation { margin: 10px 0 0; color: #1f2937; font-size: 0.96rem; }
+    .controls { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; }
+    .controls button { border: none; border-radius: 10px; padding: 12px 18px; font-size: 1rem; cursor: pointer; }
+    .btn-primary { background: #2563eb; color: white; }
+    .btn-secondary { background: #e2e8f0; color: #0f172a; }
+    .score-board { padding: 18px 20px; border-radius: 12px; background: #ffffff; border: 1px solid #dde2ec; margin-bottom: 20px; }
+    .score-board strong { font-size: 1.1rem; }
+    .small-note { font-size: 0.95rem; color: #475569; }
+    a { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="intro">
+      <h1>Chapter 7 Quiz Master</h1>
+      <p>This standalone quiz includes every Chapter 7 question verbatim, inline diagrams where required, radio/checkbox answer selection, open-book topics tagging, and explanations shown on submission.</p>
+      <p class="small-note">Each incorrect selection produces a one-line hint explaining why that option is wrong.</p>
+    </div>
+
+    <div id="quiz"></div>
+
+    <div class="controls">
+      <button class="btn-primary" id="submitBtn">Submit Answers</button>
+      <button class="btn-secondary" id="resetBtn">Reset Quiz</button>
+    </div>
+
+    <div id="score" class="score-board" aria-live="polite"></div>
+  </div>
+
+  <script>
+    const quizData = [
+      {
+        id: 1,
+        tag: 'Availability · Fault tolerance · Clustering · High availability',
+        question: 'Mary is reviewing the availability controls for the system architecture shown here. What technology is shown that provides fault tolerance for the database servers?',
+        image: 'https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_253_2955.png',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Failover cluster', hint: 'A UPS provides power continuity, not database server failover.' },
+          { code: 'B', text: 'UPS', hint: 'A UPS supports power, but the diagram shows database redundancy rather than power backup.' },
+          { code: 'C', text: 'Tape backup', hint: 'Tape backup is for recovery data, not active availability or fault tolerance.' },
+          { code: 'D', text: 'Cold site', hint: 'A cold site is a disaster recovery location, not the high-availability database technology shown.' }
+        ],
+        correct: ['A'],
+        explanation: 'The illustration shows an example of a failover cluster, where DB1 and DB2 are both configured as database servers. At any given time, only one will function as the active database server, while the other remains ready to assume responsibility if the first one fails. While the environment may use UPS, tape backup, and cold sites as disaster recovery and business continuity controls, they are not shown in the diagram.'
+      },
+      {
+        id: 2,
+        tag: 'Access control · Least privilege · Default permissions · Authorization',
+        question: 'Joe is the security administrator for an ERP system. He is preparing to create accounts for several new employees. What default access should he give to all of the new employees as he creates the accounts?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Read only', hint: 'Read-only still grants access and is not the default least-privilege setting.' },
+          { code: 'B', text: 'Editor', hint: 'Editor grants too many permissions to assign by default to new accounts.' },
+          { code: 'C', text: 'Administrator', hint: 'Administrator privileges are excessive for new employee accounts.' },
+          { code: 'D', text: 'No access', hint: 'No access is correct, as default accounts should start with no permissions until needed.' }
+        ],
+        correct: ['D'],
+        explanation: 'The principle of least privilege should guide Joe in this case. He should apply no access permissions by default and then give each user the necessary permissions to perform their job responsibilities. Read only, editor, and administrator permissions may be necessary for one or more of these users, but those permissions should be assigned based upon business need and not by default.'
+      },
+      {
+        id: 3,
+        tag: 'Privileged access · Auditing · Logging · Privileged account management',
+        question: 'Tim is configuring a privileged account management solution for his organization. Which one of the following is not a privileged administrative activity that should be automatically sent to a log of superuser actions?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Purging log entries', hint: 'Purging logs is a privileged action and should be audited.' },
+          { code: 'B', text: 'Restoring a system from backup', hint: 'Restoring from backup requires administrative privilege and should be logged.' },
+          { code: 'C', text: 'Logging into a workstation', hint: 'Logging into a workstation is a normal user activity, not a privileged administrative action.' },
+          { code: 'D', text: 'Managing user accounts', hint: 'Managing accounts is an administrative activity that should be logged.' }
+        ],
+        correct: ['C'],
+        explanation: 'While most organizations would want to log attempts to log in to a workstation, this is not considered a privileged administrative activity and would go through normal logging processes.'
+      },
+      {
+        id: 4,
+        tag: 'Insider threat · Duress · Social engineering · Security awareness',
+        question: 'When one of the employees of Alice\'s company calls in for support, she uses a code word that the company agreed to use if employees were being forced to perform an action. What is this scenario called?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Social engineering', hint: 'Social engineering is manipulation, not coercion under threat.' },
+          { code: 'B', text: 'Duress', hint: 'Duress is the correct scenario when an employee is forced to act under threat.' },
+          { code: 'C', text: 'Force majeure', hint: 'Force majeure refers to uncontrollable events, not a forced action by an attacker.' },
+          { code: 'D', text: 'Stockholm syndrome', hint: 'Stockholm syndrome is a psychological response, not the use of a duress code word.' }
+        ],
+        correct: ['B'],
+        explanation: 'Duress, or being under threat of violence or other constraints, is a concern for organizations such as banks, jewelry stores, or other organizations where an attacker may attempt to force an employee to perform actions. Organizations that expect that a scenario like this may occur will often use duress code words that let others know that they are performing actions under threat.'
+      },
+      {
+        id: 5,
+        tag: 'Forensics · Evidence types · Real evidence · Chain of custody',
+        question: 'Jordan is preparing to bring evidence into court after a cybersecurity incident investigation. He is responsible for preparing the physical artifacts, including affected servers and mobile devices. What type of evidence consists entirely of tangible items that may be brought into a court of law?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Documentary evidence', hint: 'Documentary evidence is written or recorded, not necessarily the tangible physical artifacts described.' },
+          { code: 'B', text: 'Parol evidence', hint: 'Parol evidence refers to oral testimony or contract interpretation, not tangible courtroom items.' },
+          { code: 'C', text: 'Testimonial evidence', hint: 'Testimonial evidence is witness statements, not physical evidence.' },
+          { code: 'D', text: 'Real evidence', hint: 'Real evidence is the correct answer because it consists of tangible items that may be brought to court.' }
+        ],
+        correct: ['D'],
+        explanation: 'Real evidence consists of things that may actually be brought into a courtroom as evidence. For example, real evidence includes hard disks, weapons, and items containing fingerprints. Documentary evidence consists of written items that may or may not be in tangible form. Testimonial evidence is verbal testimony given by witnesses with relevant information. The parol evidence rule says that when an agreement is put into written form, the written document is assumed to contain all the terms of the agreement.'
+      },
+      {
+        id: 6,
+        tag: 'Application control · Whitelisting · Endpoint security · Software restrictions',
+        question: 'Lauren wants to ensure that her users only run software that her organization has approved. What technology should she deploy?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Blacklisting', hint: 'Blacklisting blocks known bad software, but does not enforce approved software only.' },
+          { code: 'B', text: 'Configuration management', hint: 'Configuration management tracks system settings, but does not directly enforce allowed applications.' },
+          { code: 'C', text: 'Whitelisting', hint: 'Whitelisting is the correct technology to allow only approved applications.' },
+          { code: 'D', text: 'Graylisting', hint: 'Graylisting is not the correct technology option for enforcing approved software.' }
+        ],
+        correct: ['C'],
+        explanation: 'A whitelist of allowed applications will ensure that Lauren\'s users can run only the applications that she preapproves. Blacklists would require her to maintain a list of every application that she doesn\'t want to allow, which is an almost impossible task. Graylisting is not a technology option. Configuration management can be useful for making sure the right applications are on a PC but typically can\'t directly prevent users from running undesired applications or programs.'
+      },
+      {
+        id: 7,
+        tag: 'Cyber deception · Honeypot · Pseudo-flaw · Attack detection',
+        question: 'Colin is responsible for managing his organization\'s use of cybersecurity deception technologies. Which one of the following should he use on a honeypot system to consume an attacker\'s time while alerting administrators?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Honeynet', hint: 'A honeynet is a network of honeypots, not the specific deception on a single system.' },
+          { code: 'B', text: 'Pseudo-flaw', hint: 'A pseudo-flaw is the correct deception designed to distract an attacker.' },
+          { code: 'C', text: 'Warning banner', hint: 'A warning banner notifies intruders, but does not consume their time as a pseudo-flaw does.' },
+          { code: 'D', text: 'Darknet', hint: 'A darknet is unused address space, not a honeypot deception technique.' }
+        ],
+        correct: ['B'],
+        explanation: 'A pseudo-flaw is a false vulnerability in a system that may distract an attacker. A honeynet is a network of multiple honeypots that creates a more sophisticated environment for intruders to explore, rather than a feature Colin could use on a honeypot. A darknet is a segment of unused network address space that should have no network activity and, therefore, may be easily used to monitor for illicit activity. A warning banner is a legal tool used to notify intruders that they are not authorized to access a system.'
+      },
+      {
+        id: 8,
+        tag: 'Botnets · Incident response · Network anomalies · Malware',
+        question: 'Toni responds to the desk of a user who reports slow system activity. Upon checking outbound network connections from that system, Toni notices a large amount of social media traffic originating from the system. The user does not use social media, and when Toni checks the accounts in question, she sees they contain strange messages that appear encrypted. What is the most likely cause of this traffic?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Other users are relaying social media requests through the user\'s computer.', hint: 'Relayed social media requests would not explain the encrypted-looking messages and unusual traffic pattern.' },
+          { code: 'B', text: 'The user\'s computer is part of a botnet.', hint: 'The botnet explanation fits the unusual social media traffic and encrypted-looking messages.' },
+          { code: 'C', text: 'The user is lying about her use of social media.', hint: 'The traffic pattern indicates compromise, not simply a lie about social media use.' },
+          { code: 'D', text: 'Someone else is using the user\'s computer when she is not present.', hint: 'Unauthorized local use would not normally create the observed outbound social media botnet traffic.' }
+        ],
+        correct: ['B'],
+        explanation: 'Social media is commonly used as a command-and-control system for botnet activity. The most likely scenario here is that the user\'s computer was infected with malware and joined to a botnet. This accounts for both the unusual social media traffic and the slow system activity.'
+      },
+      {
+        id: 9,
+        tag: 'Availability design · Redundancy · Multi-region · Load balancing',
+        question: 'John deploys his website to multiple regions using load balancers around the world through his cloud infrastructure as a service provider. What availability concept is he using?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Multiple processing sites', hint: 'Multiple processing sites is the correct concept for multiregional deployment.' },
+          { code: 'B', text: 'Warm sites', hint: 'Warm sites are backup locations, not the live multiregional design described.' },
+          { code: 'C', text: 'Cold sites', hint: 'Cold sites are inactive backup sites, not active global load-balanced sites.' },
+          { code: 'D', text: 'A honeynet', hint: 'A honeynet is unrelated to availability; it is a deception environment.' }
+        ],
+        correct: ['A'],
+        explanation: 'John\'s design provides multiple processing sites, distributing load to multiple regions. Not only does this provide business continuity and disaster recovery functionality, but it also means that his design will be more resilient to denial-of-service attacks.'
+      },
+      {
+        id: 10,
+        tag: 'Network monitoring · NetFlow · Botnet detection · Threat intelligence',
+        question: 'Jim would like to identify compromised systems on his network that may be participating in a botnet. He plans to do this by watching for connections made to known command-and-control servers. Which one of the following techniques would be most likely to provide this information if Jim has access to a list of known servers?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'NetFlow records', hint: 'NetFlow records contain all communication sessions and can be compared to known malicious hosts.' },
+          { code: 'B', text: 'IDS logs', hint: 'IDS logs only contain detected anomalies, not a comprehensive list of all traffic sessions.' },
+          { code: 'C', text: 'Authentication logs', hint: 'Authentication logs track logins, not network communications to command-and-control servers.' },
+          { code: 'D', text: 'RFC logs', hint: 'RFC logs are unrelated to actual network flow records.' }
+        ],
+        correct: ['A'],
+        explanation: 'NetFlow records contain an entry for every network communication session that took place on a network and can be compared to a list of known malicious hosts. IDS logs may contain a relevant record, but it is less likely because they would create log entries only if the traffic triggers the IDS, as opposed to NetFlow records, which encompass all communications. Authentication logs and RFC logs would not have records of any network traffic.'
+      },
+      {
+        context: 'For questions 11–15, please refer to the following scenario: Gary was recently hired as the first chief information security officer (CISO) for a local government agency. The agency recently suffered a security breach and is attempting to build a new information security program. Gary would like to apply some best practices for security operations as he is designing this program.',
+        id: 11,
+        tag: 'Access management · Least privilege · Default permissions · Authorization',
+        question: 'As Gary decides what access permissions he should grant to each user, what principle should guide his decisions about default permissions?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Segregation of duties', hint: 'Segregation of duties is about splitting roles, not default permission levels.' },
+          { code: 'B', text: 'Least privilege', hint: 'Least privilege is the correct principle for default permission decisions.' },
+          { code: 'C', text: 'Privilege creep', hint: 'Privilege creep is the buildup of permissions over time, not the guiding principle.' },
+          { code: 'D', text: 'Separation of privileges', hint: 'Separation of privileges is related but not the best answer for default permissions.' }
+        ],
+        correct: ['B'],
+        explanation: 'Gary should follow the least privilege principle and assign users only the permissions they need to perform their job responsibilities. Privilege creep is a term used to describe the unintentional accumulation of privileges over time. Segregation of duties and separation of privileges are principles used to secure sensitive processes.'
+      },
+      {
+        id: 12,
+        tag: 'Segregation of duties · Access matrix · Conflict of interest · Separation of duties',
+        question: 'As Gary designs the program, he uses the matrix shown here. What principle of information security does this matrix most directly help enforce?',
+        image: 'https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_257_2960.png',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Segregation of duties', hint: 'This duties matrix is designed to enforce segregation of duties.' },
+          { code: 'B', text: 'Privilege creep', hint: 'Privilege creep is a problem, not the control enforced by the matrix.' },
+          { code: 'C', text: 'Two-person control', hint: 'Two-person control is not what a segregation matrix directly enforces.' },
+          { code: 'D', text: 'Defense in depth', hint: 'Defense in depth is layered security, not the specific matrix function here.' }
+        ],
+        correct: ['A'],
+        explanation: 'The matrix shown in the figure is known as a segregation of duties matrix. It is used to ensure that one person does not obtain two privileges that would create a potential conflict. Privilege creep is a term used to describe the unintentional accumulation of privileges over time. Two-person control is used when two people must work together to perform a sensitive action. Defense in depth is a general security principle used to describe a philosophy of overlapping security controls.'
+      },
+      {
+        id: 13,
+        tag: 'Authorization · Clearance · Need-to-know · Role-based access',
+        question: 'Gary is preparing to create an account for a new user and assign privileges to the HR database. What two elements of information must Gary verify before granting this access?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Credentials and need to know', hint: 'Credentials prove identity, but authorization depends on clearance and need to know.' },
+          { code: 'B', text: 'Clearance and need to know', hint: 'Clearance and need to know are the correct authorization elements.' },
+          { code: 'C', text: 'Password and clearance', hint: 'A password is an authentication factor, not one of the required authorization elements.' },
+          { code: 'D', text: 'Password and biometric scan', hint: 'Authentication factors are not the two authorization elements asked for in this scenario.' }
+        ],
+        correct: ['B'],
+        explanation: 'Before granting access, Gary should verify that the user has a valid security clearance and a business need to know the information. Gary is performing an authorization task, so he does not need to verify the user\'s credentials, such as a password or biometric scan.'
+      },
+      {
+        id: 14,
+        tag: 'Two-person control · Sensitive operations · Encryption key management · Separation of duties',
+        question: 'Gary is preparing to develop controls around access to root encryption keys and would like to apply a principle of security designed specifically for very sensitive operations. Which principle should he apply?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Least privilege', hint: 'Least privilege is good, but the sensitive root key control calls for two-person control.' },
+          { code: 'B', text: 'Defense in depth', hint: 'Defense in depth is broad, while the question asks for the sensitive-operation principle.' },
+          { code: 'C', text: 'Security through obscurity', hint: 'Security through obscurity is not an accepted principle for protecting highly sensitive operations.' },
+          { code: 'D', text: 'Two-person control', hint: 'Two-person control is the correct principle for very sensitive operations involving keys.' }
+        ],
+        correct: ['D'],
+        explanation: 'Gary should follow the principle of two-person control by requiring simultaneous action by two separate authorized individuals to gain access to the encryption keys. He should also apply the principles of least privilege and defense in depth, but these principles apply to all operations and are not specific to sensitive operations. Gary should avoid the security through obscurity principle, the reliance upon the secrecy of security mechanisms to provide security for a system or process.'
+      },
+      {
+        id: 15,
+        tag: 'Privileged access review · Access governance · Periodic review · Role change',
+        question: 'How often should Gary and his team conduct a review of the privileged access that a user has to sensitive systems? (Select all that apply.)',
+        type: 'checkbox',
+        choices: [
+          { code: 'A', text: 'On a periodic basis', hint: 'Periodic reviews are required for privileged access and are correct.' },
+          { code: 'B', text: 'When a user leaves the organization', hint: 'Access reviews after a departure are required and are correct.' },
+          { code: 'C', text: 'When a user changes roles', hint: 'Role changes require privileged access review and are correct.' },
+          { code: 'D', text: 'On a daily basis', hint: 'Daily reviews are impractical and not required for privileged access reviews.' }
+        ],
+        correct: ['A', 'B', 'C'],
+        explanation: 'Privileged access reviews are one of the most critical components of an organization\'s security program because they ensure that only authorized users have access to perform the most sensitive operations. They should take place whenever a user with privileged access leaves the organization or changes roles as well as on a regular, recurring basis. However, it is not reasonable to expect that these time-consuming reviews would take place on a daily basis.'
+      },
+      {
+        id: 16,
+        tag: 'Patch management · Service packs · Updates · Software maintenance',
+        question: 'Which one of the following terms is often used to describe a collection of unrelated patches released in a large collection?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Hotfix', hint: 'A hotfix is an individual patch, not a large collection.' },
+          { code: 'B', text: 'Update', hint: 'An update describes a single change, not the bundled collection called a service pack.' },
+          { code: 'C', text: 'Security fix', hint: 'A security fix is a single remediation patch, not a service pack.' },
+          { code: 'D', text: 'Service pack', hint: 'Service pack is the correct term for a large collection of patches.' }
+        ],
+        correct: ['D'],
+        explanation: 'Hotfixes, updates, and security fixes are all synonyms for single patches designed to correct a single problem. Service packs are collections of many different updates that serve as a major update to an operating system or application.'
+      },
+      {
+        id: 17,
+        tag: 'Forensics · Write blocking · Evidence preservation · Data integrity',
+        question: 'Tonya is collecting evidence from a series of systems that were involved in a cybersecurity incident. A colleague suggests that she use a write blocker for the collection process. What is the function of this device?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Masking error conditions reported by the storage device', hint: 'A write blocker does not mask error conditions; it prevents writes.' },
+          { code: 'B', text: 'Transmitting write commands to the storage device', hint: 'A write blocker does not allow write commands through to the storage device.' },
+          { code: 'C', text: 'Intercepting and modifying or discarding commands sent to the storage device', hint: 'Intercepting or discarding write commands is the correct function of a write blocker.' },
+          { code: 'D', text: 'Preventing data from being returned by a read operation sent to the device', hint: 'A write blocker does not prevent reads; it prevents writes.' }
+        ],
+        correct: ['C'],
+        explanation: 'A forensic disk controller performs four functions. One of those, write blocking, intercepts write commands sent to the device and prevents them from modifying data on the device. The other three functions include returning data requested by a read operation, returning access-significant information from the device, and reporting errors from the device back to the forensic host.'
+      },
+      {
+        id: 18,
+        tag: 'Need-to-know · Access decisions · Authorization · Business justification',
+        question: 'Lydia is processing access control requests for her organization. She comes across a request where the user does have the required security clearance, but there is no business justification for the access. Lydia denies this request. What security principle is she following?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Need to know', hint: 'Need to know is the correct principle when a user lacks business justification.' },
+          { code: 'B', text: 'Least privilege', hint: 'Least privilege is related, but the denial here is specifically due to lack of need to know.' },
+          { code: 'C', text: 'Segregation of duties', hint: 'Segregation of duties covers role separation, not this access denial scenario.' },
+          { code: 'D', text: 'Two-person control', hint: 'Two-person control is not relevant when access is denied because there is no need to know.' }
+        ],
+        correct: ['A'],
+        explanation: 'Lydia is following the need to know principle. While the user may have the appropriate security clearance to access this information, there is no business justification provided, so she does not know that the user has an appropriate need to know the information.'
+      },
+      {
+        id: 19,
+        tag: 'Insider fraud · Deterrence · Job rotation · Two-person control',
+        question: 'Helen is tasked with implementing security controls in her organization that might be used to deter fraudulent insider activity. Which one of the following mechanisms would be LEAST useful to her work?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Job rotation', hint: 'Job rotation is useful for deterring insider fraud and is not the least useful option.' },
+          { code: 'B', text: 'Mandatory vacations', hint: 'Mandatory vacations are useful for detecting fraud and are not the least useful option.' },
+          { code: 'C', text: 'Incident response', hint: 'Incident response is reactive and is the least useful for deterring insider fraud.' },
+          { code: 'D', text: 'Two-person control', hint: 'Two-person control deters fraud by requiring collusion, so it is not the least useful option.' }
+        ],
+        correct: ['C'],
+        explanation: 'Job rotation and mandatory vacations deter fraud by increasing the likelihood that it will be detected. Two-person control deters fraud by requiring collusion between two employees. Incident response does not normally serve as a deterrent mechanism.'
+      },
+      {
+        id: 20,
+        tag: 'Network QoS · Traffic prioritization · Network performance · Bandwidth management',
+        question: 'Matt wants to ensure that critical network traffic from systems throughout his company is prioritized over web browsing and social media use at this company. What technology can he use to do this?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'VLANs', hint: 'VLANs segment traffic but do not prioritize it.' },
+          { code: 'B', text: 'QoS', hint: 'QoS is the correct technology for traffic prioritization.' },
+          { code: 'C', text: 'VPN', hint: 'VPN encrypts traffic, but does not prioritize it.' },
+          { code: 'D', text: 'ISDN', hint: 'ISDN is a legacy network access technology, not a traffic prioritization solution.' }
+        ],
+        correct: ['B'],
+        explanation: 'Quality of service is a feature found on routers and other network devices that can prioritize specific network traffic. QoS policies define which traffic is prioritized, and traffic is then handled based on the policy.'
+      },
+      {
+        id: 21,
+        tag: 'Change management · Audit trail · Change log · Security incident response',
+        question: 'Tom is responding to a recent security incident and is seeking information on the approval process for a recent modification to a system\'s security settings. Where would he most likely find this information?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Change log', hint: 'The change log contains the approved change process details.' },
+          { code: 'B', text: 'System log', hint: 'System logs record system events but not the change approval process.' },
+          { code: 'C', text: 'Security log', hint: 'Security logs record security events, not the change approval details.' },
+          { code: 'D', text: 'Application log', hint: 'Application logs capture app activity, not change approval workflows.' }
+        ],
+        correct: ['A'],
+        explanation: 'The change log contains information about approved changes and the change management process. While other logs may contain details about the change\'s effect, the audit trail for change management would be found in the change log.'
+      },
+      {
+        id: 22,
+        tag: 'Travel security · VPN · Remote access · Secure connectivity',
+        question: 'Staff from Susan\'s company often travel internationally and require connectivity to corporate systems for their work. Susan believes that these users may be targeted for corporate espionage activities because of the technologies that her company is developing and wants to include advice in the security training provided to international travelers. What practice should Susan recommend that they adopt for connecting to networks while they travel?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Only connect to public Wi-Fi.', hint: 'Using public Wi-Fi is insecure and not recommended.' },
+          { code: 'B', text: 'Use a VPN for all connections.', hint: 'Using a VPN is the correct practice to protect travel network connections.' },
+          { code: 'C', text: 'Only use websites that support TLS.', hint: 'TLS protects web sessions, but does not secure all travel network traffic.' },
+          { code: 'D', text: 'Do not connect to networks while traveling.', hint: 'Avoiding networks is impractical; a VPN is the better recommendation.' }
+        ],
+        correct: ['B'],
+        explanation: 'While it may be tempting to tell her staff to simply not connect to any network, Susan knows that they will need connectivity to do their work. Using a VPN to connect their laptops and mobile devices to a trusted network and ensuring that all traffic is tunneled through the VPN is her best bet to secure their Internet usage. Susan may also want to ensure that they take “clean” laptops and devices that do not contain sensitive information or documents and that those systems are fully wiped when they return.'
+      },
+      {
+        id: 23,
+        tag: 'Vulnerability intelligence · CVE · Threat intelligence · Security sources',
+        question: 'Ricky is seeking a list of information security vulnerabilities in applications, devices, and operating systems. Which one of the following threat intelligence sources would be most useful to him?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'OWASP', hint: 'OWASP covers web application security guidance, not a broad vulnerability listing.' },
+          { code: 'B', text: 'CIS', hint: 'CIS provides security benchmarks, not a general vulnerability database.' },
+          { code: 'C', text: 'Microsoft Security Bulletins', hint: 'Microsoft bulletins are vendor-specific advisories, not a broader database like CVE.' },
+          { code: 'D', text: 'CVE', hint: 'CVE is the correct vulnerability listing source.' }
+        ],
+        correct: ['D'],
+        explanation: 'The Common Vulnerabilities and Exposures (CVE) database contains standardized information on many different security issues. The Open Worldwide Application Security Project (OWASP) contains general guidance on web application security issues but does not track specific vulnerabilities or go beyond web applications. The Center for Internet Security (CIS) maintains benchmarks for securely configuring devices, operating systems, and applications. They do not track vulnerabilities. Microsoft Security Bulletins are also good sources of vulnerability information but are not comprehensive databases of known issues.'
+      },
+      {
+        id: 24,
+        tag: 'Disaster recovery · Disaster classification · Business continuity · Incident response',
+        question: 'Which of the following would normally be considered an example of a disaster when performing disaster recovery planning? (Select all that apply.)',
+        type: 'checkbox',
+        choices: [
+          { code: 'A', text: 'Hacking incident', hint: 'A hacking incident is a human-made disaster and is considered a disaster for recovery planning.' },
+          { code: 'B', text: 'Flood', hint: 'A flood is a natural disaster and counts as a disaster for recovery planning.' },
+          { code: 'C', text: 'Fire', hint: 'A fire is a disaster that would normally be included in disaster recovery planning.' },
+          { code: 'D', text: 'Terrorism', hint: 'Terrorism is a human-made disaster and is included in recovery planning.' }
+        ],
+        correct: ['A', 'B', 'C', 'D'],
+        explanation: 'A disaster is any event that can disrupt normal IT operations and can be either natural or human made. Hacking and terrorism are examples of human-made disasters, while flooding and fire are examples of natural disasters.'
+      },
+      {
+        id: 25,
+        tag: 'Disaster recovery testing · Read-through · Tabletop exercise · Continuity planning',
+        question: 'Glenda would like to conduct a disaster recovery test and is seeking a test that will allow a review of the plan with no disruption to normal information system activities and as minimal a commitment of time as possible. What type of test should she choose?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Tabletop exercise', hint: 'A tabletop exercise is more interactive and time-consuming than the read-through.' },
+          { code: 'B', text: 'Parallel test', hint: 'A parallel test runs systems alongside the production environment and is more disruptive.' },
+          { code: 'C', text: 'Full interruption test', hint: 'A full interruption test takes down production and is the most disruptive option.' },
+          { code: 'D', text: 'Read-through', hint: 'A read-through is the least disruptive review and is the correct choice.' }
+        ],
+        correct: ['D'],
+        explanation: 'The read-through is the least disruptive type of disaster recovery test. During a read-through, team members each review the contents of their disaster recovery checklists on their own and suggest any necessary changes. During a tabletop exercise, team members come together and discuss a specific scenario without making any changes to information systems. During a parallel test, the team actually activates the disaster recovery site for testing, but the primary site remains operational. During a full interruption test, the team takes down the primary site and confirms that the disaster recovery site is capable of handling regular operations. The full interruption test is the most thorough test but also the most disruptive.'
+      },
+      {
+        id: 26,
+        tag: 'Backup rotation · Tape management · Backup strategy · Media lifecycle',
+        question: 'Which one of the following is not an example of a backup tape rotation scheme?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Grandfather-Father-Son', hint: 'Grandfather-Father-Son is a valid tape rotation scheme.' },
+          { code: 'B', text: 'Meet-in-the-Middle', hint: 'Meet-in-the-Middle is not a backup tape rotation scheme.' },
+          { code: 'C', text: 'Tower of Hanoi', hint: 'Tower of Hanoi is a valid tape rotation scheme.' },
+          { code: 'D', text: 'Six Cartridge Weekly', hint: 'Six Cartridge Weekly is a valid tape rotation scheme.' }
+        ],
+        correct: ['B'],
+        explanation: 'The Grandfather-Father-Son, Tower of Hanoi, and Six Cartridge Weekly schemes are all different approaches to rotating backup media that balance reuse of media with data retention concerns. Meet-in-the-middle is a cryptographic attack against 2DES encryption.'
+      },
+      {
+        id: 27,
+        tag: 'Two-person control · Access approval · Separation of duties · Dual authorization',
+        question: 'Helen is implementing a new security mechanism for granting employees administrative privileges in the accounting system. She designs the process so that both the employee\'s manager and the accounting manager must approve the request before the access is granted. What information security principle is Helen enforcing?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'Least privilege', hint: 'Least privilege limits access, but this scenario describes dual approval.' },
+          { code: 'B', text: 'Two-person control', hint: 'Two-person control is the correct principle for requiring approval by two people.' },
+          { code: 'C', text: 'Job rotation', hint: 'Job rotation shifts responsibilities over time, not approval control.' },
+          { code: 'D', text: 'Segregation of duties', hint: 'Segregation of duties prevents conflicts, but this scenario is specifically two-person control.' }
+        ],
+        correct: ['B'],
+        explanation: 'In this scenario, Helen designed a process that requires the concurrence of two people to perform a sensitive action. This is an example of two-person control. This is different from segregation of duties, where one individual may not have two separate permissions that, when combined, might allow an unwanted action. Segregation of duties applied to a situation like this one might say that the same person may not have both the ability to initiate a request and the ability to approve a request. Least privilege says that an individual should have only the necessary permissions required to carry out their job function. Job rotation is a scheme that has users periodically shift job functions in order to detect malfeasance.'
+      },
+      {
+        id: 28,
+        tag: 'Evidence admissibility · Legal requirements · Relevance · Competent acquisition',
+        question: 'Frank is considering the use of different types of evidence in an upcoming criminal matter. Which one of the following is not a requirement for evidence to be admissible in court?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'The evidence must be relevant.', hint: 'Relevancy is a true admissibility requirement.' },
+          { code: 'B', text: 'The evidence must be material.', hint: 'Materiality is a true admissibility requirement.' },
+          { code: 'C', text: 'The evidence must be tangible.', hint: 'Tangible physical evidence is not required because testimony can also be admissible.' },
+          { code: 'D', text: 'The evidence must be competently acquired.', hint: 'Competent acquisition is a true admissibility requirement.' }
+        ],
+        correct: ['C'],
+        explanation: 'Evidence provided in court must be relevant to determining a fact in question, material to the case at hand, and competently obtained. Evidence does not need to be tangible. Witness testimony is an example of intangible evidence that may be offered in court.'
+      },
+      {
+        id: 29,
+        tag: 'Lessons learned · Postmortem review · Incident documentation · Continuous improvement',
+        question: 'Harold recently completed leading the postmortem review of a security incident. What documentation should he prepare next?',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: 'A lessons learned document', hint: 'A lessons learned document is the typical next deliverable after a postmortem review.' },
+          { code: 'B', text: 'A risk assessment', hint: 'A risk assessment is not the immediate next document after a postmortem review.' },
+          { code: 'C', text: 'A remediation list', hint: 'A remediation list can be created later, but the primary post-review document is lessons learned.' },
+          { code: 'D', text: 'A mitigation checklist', hint: 'A mitigation checklist is not the primary post-review deliverable.' }
+        ],
+        correct: ['A'],
+        explanation: 'A lessons learned document is often created and distributed to involved parties after a postmortem review to ensure that those who were involved in the incident and others who may benefit from the knowledge are aware of what they can do to prevent future issues and to improve response in the event that one occurs.'
+      },
+      {
+        id: 30,
+        tag: 'CSIRT membership · Incident response team · Stakeholder involvement · Communication',
+        question: 'Beth is creating a new cybersecurity incident response team (CSIRT) and would like to determine the appropriate team membership. Which of the following groups would she normally include? (Select all that apply.)',
+        type: 'checkbox',
+        choices: [
+          { code: 'A', text: 'Information security', hint: 'Information security is normally included on a CSIRT.' },
+          { code: 'B', text: 'Law enforcement', hint: 'Law enforcement is usually consulted as needed, but not normally a core CSIRT member.' },
+          { code: 'C', text: 'Senior management', hint: 'Senior management is normally included on a CSIRT.' },
+          { code: 'D', text: 'Public affairs', hint: 'Public affairs is normally included on a CSIRT.' }
+        ],
+        correct: ['A', 'C', 'D'],
+        explanation: 'CSIRT representation normally includes at least representatives of senior management, information security professionals, legal representatives, public relations staff, human resources, and engineering/technical staff. Law enforcement personnel would not be included on such a team and would only be consulted as necessary.'
+      },
+      {
+        id: 31,
+        tag: 'Backup strategy · Differential backup · Data change tracking · Recovery point',
+        question: 'Sam is responsible for backing up his company\'s primary file server. He configured a backup schedule that performs full backups every Monday evening at 9 p.m. and differential backups on other days of the week at that same time. Files change according to the information shown here. How many files will be copied in Wednesday\'s backup?',
+        image: 'https://raw.githubusercontent.com/SSMGFT/SOMETHING/main/Assets/chapter7_images/img_page_263_2967.png',
+        type: 'radio',
+        choices: [
+          { code: 'A', text: '2', hint: 'Two files is too few; a differential backup includes all files changed since the last full backup.' },
+          { code: 'B', text: '3', hint: 'Three files does not include all files modified since the Monday full backup.' },
+          { code: 'C', text: '5', hint: 'Five files is the correct number of files changed since the last full backup.' },
+          { code: 'D', text: '6', hint: 'Six files is too many; one of the files had not been modified since Monday.' }
+        ],
+        correct: ['C'],
+        explanation: 'In this scenario, all the files on the server will be backed up on Monday evening during the full backup. The differential backup on Wednesday will then copy all files modified since the last full backup. These include files 1, 2, 3, 5, and 6: a total of five files.'
+      }
+    ];
+
+    const quizContainer = document.getElementById('quiz');
+    const scoreContainer = document.getElementById('score');
+    const submitBtn = document.getElementById('submitBtn');
+    const resetBtn = document.getElementById('resetBtn');
+
+    function escapeHtml(text) {
+      return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function renderQuiz() {
+      quizContainer.innerHTML = '';
+      quizData.forEach((item, index) => {
+        if (item.context && index === 10) {
+          const contextBlock = document.createElement('div');
+          contextBlock.className = 'scenario';
+          contextBlock.innerHTML = `<strong>Scenario Context</strong><p>${escapeHtml(item.context)}</p>`;
+          quizContainer.appendChild(contextBlock);
+        }
+
+        const card = document.createElement('div');
+        card.className = 'question-card';
+        card.id = `question-${item.id}`;
+
+        const heading = document.createElement('div');
+        heading.className = 'question-meta';
+        heading.innerText = `Question ${item.id} · ${item.tag}`;
+        card.appendChild(heading);
+
+        const questionText = document.createElement('p');
+        questionText.className = 'question-text';
+        questionText.innerHTML = escapeHtml(item.question);
+        card.appendChild(questionText);
+
+        if (item.image) {
+          const img = document.createElement('img');
+          img.className = 'question-image';
+          img.src = item.image;
+          img.alt = `Diagram for question ${item.id}`;
+          card.appendChild(img);
+        }
+
+        const choiceList = document.createElement('div');
+        item.choices.forEach(choice => {
+          const choiceId = `q${item.id}-${choice.code}`;
+          const choiceWrapper = document.createElement('div');
+          choiceWrapper.className = 'choice';
+          const input = document.createElement('input');
+          input.type = item.type;
+          input.name = `question-${item.id}`;
+          input.id = choiceId;
+          input.value = choice.code;
+          input.dataset.hint = choice.hint;
+          const label = document.createElement('label');
+          label.htmlFor = choiceId;
+          label.innerHTML = `<strong>${choice.code}.</strong> ${escapeHtml(choice.text)}`;
+          choiceWrapper.appendChild(input);
+          choiceWrapper.appendChild(label);
+          choiceList.appendChild(choiceWrapper);
+        });
+        card.appendChild(choiceList);
+
+        const feedbackDiv = document.createElement('div');
+        feedbackDiv.className = 'feedback';
+        feedbackDiv.id = `feedback-${item.id}`;
+        feedbackDiv.style.display = 'none';
+        card.appendChild(feedbackDiv);
+
+        quizContainer.appendChild(card);
+      });
+      scoreContainer.innerHTML = '<strong>Ready to begin.</strong> Click Submit when you have answered all questions.';
+    }
+
+    function compareSelections(item, selected) {
+      const correctSet = new Set(item.correct);
+      const selectedSet = new Set(selected);
+      if (item.type === 'radio') {
+        return selected.length === 1 && item.correct.includes(selected[0]);
+      }
+      if (selected.length !== item.correct.length) {
+        return false;
+      }
+      return item.correct.every(code => selectedSet.has(code));
+    }
+
+    function handleSubmit() {
+      let score = 0;
+      let total = quizData.length;
+      let feedbackMessages = [];
+      quizData.forEach(item => {
+        const inputs = Array.from(document.querySelectorAll(`#question-${item.id} input[name='question-${item.id}']`));
+        const selected = inputs.filter(input => input.checked).map(input => input.value);
+        const isCorrect = compareSelections(item, selected);
+        const feedbackDiv = document.getElementById(`feedback-${item.id}`);
+        feedbackDiv.style.display = 'block';
+        feedbackDiv.classList.toggle('correct', isCorrect);
+        feedbackDiv.classList.toggle('incorrect', !isCorrect);
+        let content = '';
+
+        if (selected.length === 0) {
+          content += '<p><strong>No answer selected.</strong></p>';
+        }
+
+        if (isCorrect) {
+          content += '<p><strong>Correct.</strong></p>';
+          score += 1;
+        } else {
+          content += '<p><strong>Incorrect.</strong></p>';
+          const wrongSelections = inputs.filter(input => input.checked && !item.correct.includes(input.value));
+          if (wrongSelections.length > 0) {
+            content += '<ul>';
+            wrongSelections.forEach(input => {
+              content += `<li class="hint">${escapeHtml(input.dataset.hint)}</li>`;
+            });
+            content += '</ul>';
+          }
+          const missingCorrect = item.correct.filter(code => !selected.includes(code));
+          if (missingCorrect.length > 0) {
+            content += '<ul>';
+            missingCorrect.forEach(code => {
+              const choice = item.choices.find(c => c.code === code);
+              if (choice) {
+                content += `<li class="hint">You also needed to select ${escapeHtml(code)}. ${escapeHtml(choice.hint)}</li>`;
+              }
+            });
+            content += '</ul>';
+          }
+        }
+        content += `<div class="explanation"><strong>Explanation:</strong> ${escapeHtml(item.explanation)}</div>`;
+        feedbackDiv.innerHTML = content;
+      });
+
+      scoreContainer.innerHTML = `<strong>Score:</strong> ${score} / ${total} (${Math.round((score/total)*100)}%)`;
+      scoreContainer.innerHTML += '<p class="small-note">Review each question feedback for the correct explanation and selected option hints.</p>';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function handleReset() {
+      quizData.forEach(item => {
+        const inputs = document.querySelectorAll(`#question-${item.id} input[name='question-${item.id}']`);
+        inputs.forEach(input => input.checked = false);
+        const feedbackDiv = document.getElementById(`feedback-${item.id}`);
+        feedbackDiv.style.display = 'none';
+        feedbackDiv.innerHTML = '';
+      });
+      scoreContainer.innerHTML = '<strong>Quiz reset.</strong> Answer the questions and then submit again.';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    submitBtn.addEventListener('click', handleSubmit);
+    resetBtn.addEventListener('click', handleReset);
+    renderQuiz();
+  </script>
+</body>
+</html>
